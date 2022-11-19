@@ -14,7 +14,7 @@ class TransactionsController extends Controller
         $date = $this->clientCode(new GetAllFiles($request->provider, $request->amounteMin, $request->amounteMax,
             $request->status, $request->currency));
 
-        return response()->json(['data' => $date]);
+        return  $date;
     }
 
     function clientCode(Transactions $creator): array
